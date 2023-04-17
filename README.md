@@ -8,7 +8,14 @@ so i decided to create a minimalistic config which uses enum to store data into 
 and retrive it using enum directly.
 
 ### how to use?
-can be use directly on main.
+please add derive feature into Cargo.toml\
+to enable `Configure` derive.
+```toml
+[dependencies]
+mini-config = { version="*", features=["derive"]}
+```
+
+it can be used directly on main.
 ```rs
 use mini_config::Configure;
 
