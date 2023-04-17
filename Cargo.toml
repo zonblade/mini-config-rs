@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "mini-config",
+    "mini-config-derive"
+]
+exclude = [
+    "example"
+]
