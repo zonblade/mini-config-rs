@@ -2,6 +2,7 @@
 name = "mini-config"
 version = "0.1.0"
 edition = "2021"
+authors = ["ZonBlade"]
 readme = "../README.md"
 repository = "https://github.com/zonblade/mini-config-rs"
 
