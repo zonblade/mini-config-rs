@@ -40,4 +40,6 @@ use crate::SampleConfig;
 and you good to go using `.set("new val")` if you want to re-initialize\
 or `.val()` if you want to get the data in that particular function.
 
+
+
 best practice? please refer to `example` folder at github repository.
