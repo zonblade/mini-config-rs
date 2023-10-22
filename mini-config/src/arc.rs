@@ -4,17 +4,16 @@ where
 {
     let binding = key.to_string();
     let value = super::get_value(&binding);
-    let value = value.expect("value not found");
-    let res = Box::leak(value.to_owned().into_boxed_str());
-    res
+    std::mem::drop(binding);
+    let value = value.unwrap_or("undefined");
+    value
 }
 
 pub fn set<T>(key: T, value: String) -> ()
 where
     T: ToString,
 {
-    let binding = key.to_string();
-    let key = Box::leak(binding.to_owned().into_boxed_str());
-    let value = Box::leak(value.to_owned().into_boxed_str());
-    super::set_value(key, value);
+    let key_ref = Box::leak(Box::new(key.to_string()));
+    let value_ref = Box::leak(Box::new(value.to_string()));
+    super::set_value(key_ref, value_ref);
 }

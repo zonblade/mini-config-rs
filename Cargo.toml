@@ -1,4 +1,5 @@
 [workspace]
+resolver = "2"
 members = [
     "mini-config",
     "mini-config-derive"

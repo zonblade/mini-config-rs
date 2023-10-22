@@ -1,6 +1,10 @@
 # mini-config-rs
 Minimalistic Dynamic Config for Rust
 
+### what's new on 0.1.2?
+fixed memory leak. now it's safe for 2k RPS.\
+[memory leak issue story [FIXED]](https://github.com/zonblade/mini-config-rs/issues/1)
+
 ### why this exist?
 i've tired to try rust config out there. but it's too big and heavy for my small project.\
 and for some reason, there is much feature which i did not use at all.\
