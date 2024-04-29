@@ -1,9 +1,13 @@
 # mini-config-rs
 Minimalistic Dynamic Config for Rust
 
-### what's new on 0.1.2?
-fixed memory leak. now it's safe for 2k RPS.\
-[memory leak issue story [FIXED]](https://github.com/zonblade/mini-config-rs/issues/1)
+### what's new on 0.1.3?
+memory enhancement "again", tested with 32 million get simultaniously only consume 1.009 KB.
+added new feature `get_str()` to get by refrence (reduce 2x from `get()` because of double String usage) 
+now it's only 1x usage of String
+```rs
+SomeEnum::Data.get_str() -> &str
+```
 
 ### why this exist?
 i've tired to try rust config out there. but it's too big and heavy for my small project.\

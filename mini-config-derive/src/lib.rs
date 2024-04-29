@@ -21,13 +21,19 @@ pub fn arc_forge_macro(input: TokenStream) -> TokenStream {
             pub fn get(&self) -> String {
                 mini_config::arc::get_string::<#name>(self.to_owned()).to_string()
             }
-            
+
             pub fn val(&self) -> String {
                 mini_config::arc::get_string::<#name>(self.to_owned()).to_string()
             }
 
             pub fn set(&self,value:&str) -> () {
-                mini_config::arc::set::<#name>(self.to_owned(), String::from(value))
+                mini_config::arc::set::<#name>(self.to_owned(), value)
+            }
+
+            pub fn get_str(&self) -> &'static str {
+                let key = format!("{:}", self);
+                let res = mini_config::arc::get_str(&key);
+                res
             }
         }
     };

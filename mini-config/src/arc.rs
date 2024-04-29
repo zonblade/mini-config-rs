@@ -9,7 +9,13 @@ where
     value
 }
 
-pub fn set<T>(key: T, value: String) -> ()
+pub fn get_str(key: &str) -> &'static str {
+    let value = super::get_value(key);
+    let value = value.unwrap_or("undefined");
+    value
+}
+
+pub fn set<T>(key: T, value: &str) -> ()
 where
     T: ToString,
 {
