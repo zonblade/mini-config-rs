@@ -15,4 +15,4 @@ default = []
 derive = ["mini-config-derive"]
 
 [dependencies]
-mini-config-derive = {path = "../mini-config-derive", version = "^0.1.1", optional = true}
+mini-config-derive = {path = "../mini-config-derive", version = "^0.1.2", optional = true}
