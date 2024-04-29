@@ -8,8 +8,6 @@ fn main() {
     // call function from other file
     other_sample::sample::test_get_data();
 
-    // sleep few second
-    
     for c in 0..32_000_000 {
         let _ = config::SampleConfig::DatabaseName.get_str();
         // print reset line

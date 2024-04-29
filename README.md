@@ -2,12 +2,13 @@
 Minimalistic Dynamic Config for Rust
 
 ### what's new on 0.1.3?
-memory enhancement "again", tested with 32 million get simultaniously only consume 1.009 KB.
+memory enhancement "again", tested with 32 million get simultaneously only consume 1.009 KB.
 added new feature `get_str()` to get by refrence (reduce 2x from `get()` because of double String usage) 
 now it's only 1x usage of String
 ```rs
 SomeEnum::Data.get_str() -> &str
 ```
+no breaking changes introduced from 0.1.2, you can upgrade without worries!
 
 ### why this exist?
 i've tired to try rust config out there. but it's too big and heavy for my small project.\
